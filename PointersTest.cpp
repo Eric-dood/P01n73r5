@@ -41,24 +41,34 @@ int main()
 //Define setUpFlowers(); will be used for initializing flower structs
 void setUpFlowers(Flower *ptr, int num)
 {
-    //
+    //Print out the flower number
     cout << "Flower #" << num + 1 << ":" << endl << "------------------------" << endl;
+    //Enter the flower's name
     cout << "Name: ";
     getline(cin, ptr->name);
+    //Enter the color of the flower
     cout << "Color: ";
     getline(cin, ptr->color);
+    //Enter how many petals the flower has
     cout << "Number of petals: ";
     cin >> ptr->petals;
+    //Use cin.ignore to clear unwanted outputs
     cin.ignore(1000, 10);
+    //Leave extra space for the next entry
     cout << endl;
 }
 
 //Define printFlowers(); will be used for printing all flowers' elements.
 void printFlowers(Flower *ptr, int num)
 {
+    //Print out the flower number
     cout << "Flower #" << num << " summary:" << endl << "-----------------------" << endl;
+    //Print out the flower name
     cout << "Name: " << ptr->name << endl;
+    //Print out the flower color
     cout << "Color: " << ptr->color << endl;
+    //Print out the number of petals
     cout << "Number of petals: " << ptr->petals << endl;
+    //Leave extra space for the next entry
     cout << endl;
 }
